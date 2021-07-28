@@ -1,0 +1,334 @@
+[INFO ] 2021-07-28 16:16:27.535 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+ [INFO ] 2021-07-28 16:16:28.076 [restartedMain] RentACarApiApplication - Starting RentACarApiApplication using Java 16.0.1 on MBP-de-Catarina.lan with PID 44059 (/Users/catarinasousa/Desktop/rent-a-car-api-step-3/target/classes started by catarinasousa in /Users/catarinasousa/Desktop/rent-a-car-api-step-3)
+ [INFO ] 2021-07-28 16:16:28.137 [restartedMain] RentACarApiApplication - No active profile set, falling back to default profiles: default
+ [INFO ] 2021-07-28 16:16:28.376 [restartedMain] DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ [INFO ] 2021-07-28 16:16:28.376 [restartedMain] DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ [INFO ] 2021-07-28 16:16:30.991 [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ [INFO ] 2021-07-28 16:16:31.095 [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 86 ms. Found 3 JPA repository interfaces.
+ [INFO ] 2021-07-28 16:16:32.172 [restartedMain] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+ [INFO ] 2021-07-28 16:16:32.201 [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+ [INFO ] 2021-07-28 16:16:32.203 [restartedMain] StandardService - Starting service [Tomcat]
+ [INFO ] 2021-07-28 16:16:32.204 [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+ [INFO ] 2021-07-28 16:16:32.394 [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+ [INFO ] 2021-07-28 16:16:32.394 [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4017 ms
+ [INFO ] 2021-07-28 16:16:32.664 [restartedMain] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+ [INFO ] 2021-07-28 16:16:32.764 [restartedMain] Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+ [INFO ] 2021-07-28 16:16:33.179 [restartedMain] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ [INFO ] 2021-07-28 16:16:33.528 [restartedMain] HikariDataSource - HikariPool-1 - Starting...
+ [INFO ] 2021-07-28 16:16:34.467 [restartedMain] HikariDataSource - HikariPool-1 - Start completed.
+ [INFO ] 2021-07-28 16:16:34.530 [restartedMain] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+ [WARN ] 2021-07-28 16:16:36.080 [restartedMain] ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "drop table if exists cars" via JDBC Statement
+ org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "drop table if exists cars" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:241) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:145) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) [spring-context-5.3.8.jar:5.3.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) [spring-context-5.3.8.jar:5.3.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) [spring-context-5.3.8.jar:5.3.8]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) [spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.2.jar:2.5.2]
+	at academy.mindswap.rentacarapi.RentACarApiApplication.main(RentACarApiApplication.java:10) [classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.5.2.jar:2.5.2]
+Caused by: java.sql.SQLException: Cannot drop table 'cars' referenced by a foreign key constraint 'FKa4bnwucf95000kpo7wy4hspna' on table 'rents'.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:762) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:646) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:?]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	... 39 more
+[WARN ] 2021-07-28 16:16:36.185 [restartedMain] ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "create table cars (car_id bigint not null auto_increment, version integer not null, available bit not null, brand integer not null, car_segment integer not null, date_of_purchase datetime(6) not null, model_description varchar(255) not null, plate varchar(8) not null, primary key (car_id)) engine=InnoDB" via JDBC Statement
+ org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table cars (car_id bigint not null auto_increment, version integer not null, available bit not null, brand integer not null, car_segment integer not null, date_of_purchase datetime(6) not null, model_description varchar(255) not null, plate varchar(8) not null, primary key (car_id)) engine=InnoDB" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:439) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlStrings(SchemaCreatorImpl.java:423) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:314) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:166) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:135) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:121) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:156) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) [spring-context-5.3.8.jar:5.3.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) [spring-context-5.3.8.jar:5.3.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) [spring-context-5.3.8.jar:5.3.8]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) [spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.2.jar:2.5.2]
+	at academy.mindswap.rentacarapi.RentACarApiApplication.main(RentACarApiApplication.java:10) [classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.5.2.jar:2.5.2]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'cars' already exists
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:762) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:646) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:?]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	... 39 more
+[WARN ] 2021-07-28 16:16:36.273 [restartedMain] ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table cars add constraint UK_h47vv10sihuuf1d7ea6ehgvh9 unique (plate)" via JDBC Statement
+ org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table cars add constraint UK_h47vv10sihuuf1d7ea6ehgvh9 unique (plate)" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:439) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlStrings(SchemaCreatorImpl.java:423) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:348) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:166) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:135) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:121) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:156) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) [spring-context-5.3.8.jar:5.3.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) [spring-context-5.3.8.jar:5.3.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) [spring-context-5.3.8.jar:5.3.8]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) [spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.2.jar:2.5.2]
+	at academy.mindswap.rentacarapi.RentACarApiApplication.main(RentACarApiApplication.java:10) [classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.5.2.jar:2.5.2]
+Caused by: java.sql.SQLSyntaxErrorException: Duplicate key name 'UK_h47vv10sihuuf1d7ea6ehgvh9'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:762) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:646) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:?]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	... 39 more
+[INFO ] 2021-07-28 16:16:36.443 [restartedMain] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+ [INFO ] 2021-07-28 16:16:36.456 [restartedMain] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ [WARN ] 2021-07-28 16:16:36.521 [restartedMain] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ [WARN ] 2021-07-28 16:16:37.020 [restartedMain] AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through method 'setAuthenticatorEntryPoint' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'academy.mindswap.rentacarapi.security.AuthenticatorEntryPoint' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+ [INFO ] 2021-07-28 16:16:37.020 [restartedMain] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+ [INFO ] 2021-07-28 16:16:37.031 [restartedMain] HikariDataSource - HikariPool-1 - Shutdown initiated...
+ [INFO ] 2021-07-28 16:16:37.047 [restartedMain] HikariDataSource - HikariPool-1 - Shutdown completed.
+ [INFO ] 2021-07-28 16:16:37.050 [restartedMain] StandardService - Stopping service [Tomcat]
+ [INFO ] 2021-07-28 16:16:37.064 [restartedMain] ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+ [ERROR] 2021-07-28 16:16:37.104 [restartedMain] LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method setAuthenticatorEntryPoint in academy.mindswap.rentacarapi.config.SecurityConfig required a bean of type 'academy.mindswap.rentacarapi.security.AuthenticatorEntryPoint' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'academy.mindswap.rentacarapi.security.AuthenticatorEntryPoint' in your configuration.
+
+ [INFO ] 2021-07-28 16:19:15.217 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+ [INFO ] 2021-07-28 16:19:15.367 [restartedMain] RentACarApiApplication - Starting RentACarApiApplication using Java 16.0.1 on MBP-de-Catarina.lan with PID 44094 (/Users/catarinasousa/Desktop/rent-a-car-api-step-3/target/classes started by catarinasousa in /Users/catarinasousa/Desktop/rent-a-car-api-step-3)
+ [INFO ] 2021-07-28 16:19:15.371 [restartedMain] RentACarApiApplication - No active profile set, falling back to default profiles: default
+ [INFO ] 2021-07-28 16:19:15.471 [restartedMain] DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ [INFO ] 2021-07-28 16:19:15.472 [restartedMain] DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ [INFO ] 2021-07-28 16:19:16.666 [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ [INFO ] 2021-07-28 16:19:16.751 [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72 ms. Found 3 JPA repository interfaces.
+ [INFO ] 2021-07-28 16:19:17.660 [restartedMain] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+ [INFO ] 2021-07-28 16:19:17.679 [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+ [INFO ] 2021-07-28 16:19:17.680 [restartedMain] StandardService - Starting service [Tomcat]
+ [INFO ] 2021-07-28 16:19:17.681 [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+ [INFO ] 2021-07-28 16:19:17.838 [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+ [INFO ] 2021-07-28 16:19:17.838 [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2364 ms
+ [INFO ] 2021-07-28 16:19:18.065 [restartedMain] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+ [INFO ] 2021-07-28 16:19:18.166 [restartedMain] Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+ [INFO ] 2021-07-28 16:19:18.382 [restartedMain] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ [INFO ] 2021-07-28 16:19:18.581 [restartedMain] HikariDataSource - HikariPool-1 - Starting...
+ [INFO ] 2021-07-28 16:19:19.061 [restartedMain] HikariDataSource - HikariPool-1 - Start completed.
+ [INFO ] 2021-07-28 16:19:19.102 [restartedMain] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+ [INFO ] 2021-07-28 16:19:20.678 [restartedMain] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+ [INFO ] 2021-07-28 16:19:20.696 [restartedMain] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ [WARN ] 2021-07-28 16:19:20.762 [restartedMain] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ [INFO ] 2021-07-28 16:19:22.048 [restartedMain] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@638d7f76, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b22b823, org.springframework.security.web.header.HeaderWriterFilter@5a81ab39, org.springframework.security.web.authentication.logout.LogoutFilter@292131e8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7d55931a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5d7267e2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c2036a0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4937be27, org.springframework.security.web.session.SessionManagementFilter@75f3c84d, org.springframework.security.web.access.ExceptionTranslationFilter@1d902678, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@73f3bf2c]
+ [INFO ] 2021-07-28 16:19:22.554 [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+ [INFO ] 2021-07-28 16:19:22.580 [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+ [INFO ] 2021-07-28 16:19:22.616 [restartedMain] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+ [INFO ] 2021-07-28 16:19:22.627 [restartedMain] RentACarApiApplication - Started RentACarApiApplication in 8.079 seconds (JVM running for 9.532)
+ [INFO ] 2021-07-28 16:22:09.664 [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+ [INFO ] 2021-07-28 16:22:09.675 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+ [INFO ] 2021-07-28 16:22:09.691 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+ [INFO ] 2021-07-28 16:22:29.737 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+ [INFO ] 2021-07-28 16:22:29.839 [restartedMain] RentACarApiApplication - Starting RentACarApiApplication using Java 16.0.1 on MBP-de-Catarina.lan with PID 44131 (/Users/catarinasousa/Desktop/rent-a-car-api-step-3/target/classes started by catarinasousa in /Users/catarinasousa/Desktop/rent-a-car-api-step-3)
+ [INFO ] 2021-07-28 16:22:29.844 [restartedMain] RentACarApiApplication - No active profile set, falling back to default profiles: default
+ [INFO ] 2021-07-28 16:22:29.951 [restartedMain] DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ [INFO ] 2021-07-28 16:22:29.953 [restartedMain] DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ [INFO ] 2021-07-28 16:22:31.117 [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ [INFO ] 2021-07-28 16:22:31.194 [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 3 JPA repository interfaces.
+ [INFO ] 2021-07-28 16:22:32.053 [restartedMain] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+ [INFO ] 2021-07-28 16:22:32.073 [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+ [INFO ] 2021-07-28 16:22:32.074 [restartedMain] StandardService - Starting service [Tomcat]
+ [INFO ] 2021-07-28 16:22:32.074 [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+ [INFO ] 2021-07-28 16:22:32.185 [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+ [INFO ] 2021-07-28 16:22:32.187 [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2232 ms
+ [INFO ] 2021-07-28 16:22:32.409 [restartedMain] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+ [INFO ] 2021-07-28 16:22:32.477 [restartedMain] Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+ [INFO ] 2021-07-28 16:22:32.665 [restartedMain] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ [INFO ] 2021-07-28 16:22:32.823 [restartedMain] HikariDataSource - HikariPool-1 - Starting...
+ [INFO ] 2021-07-28 16:22:33.379 [restartedMain] HikariDataSource - HikariPool-1 - Start completed.
+ [INFO ] 2021-07-28 16:22:33.441 [restartedMain] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+ [INFO ] 2021-07-28 16:22:35.184 [restartedMain] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+ [INFO ] 2021-07-28 16:22:35.202 [restartedMain] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ [WARN ] 2021-07-28 16:22:35.297 [restartedMain] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ [INFO ] 2021-07-28 16:22:36.451 [restartedMain] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73f3bf2c, org.springframework.security.web.context.SecurityContextPersistenceFilter@18892cbd, org.springframework.security.web.header.HeaderWriterFilter@5d490a38, org.springframework.security.web.authentication.logout.LogoutFilter@4295ed76, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@ad64f60, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d00dfd4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a81ab39, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@150517c8, org.springframework.security.web.session.SessionManagementFilter@19ddcc44, org.springframework.security.web.access.ExceptionTranslationFilter@7bd2d248, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@17090514]
+ [INFO ] 2021-07-28 16:22:36.921 [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+ [INFO ] 2021-07-28 16:22:36.993 [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+ [INFO ] 2021-07-28 16:22:37.015 [restartedMain] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+ [INFO ] 2021-07-28 16:22:37.032 [restartedMain] RentACarApiApplication - Started RentACarApiApplication in 7.722 seconds (JVM running for 9.07)
+ [INFO ] 2021-07-28 16:25:18.462 [http-nio-8080-exec-2] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ [INFO ] 2021-07-28 16:25:18.463 [http-nio-8080-exec-2] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+ [INFO ] 2021-07-28 16:25:18.464 [http-nio-8080-exec-2] DispatcherServlet - Completed initialization in 1 ms
+ [INFO ] 2021-07-28 16:27:43.518 [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+ [INFO ] 2021-07-28 16:27:43.522 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+ [INFO ] 2021-07-28 16:27:43.532 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+ [INFO ] 2021-07-28 16:28:04.579 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+ [INFO ] 2021-07-28 16:28:04.703 [restartedMain] RentACarApiApplication - Starting RentACarApiApplication using Java 16.0.1 on MBP-de-Catarina.lan with PID 44200 (/Users/catarinasousa/Desktop/rent-a-car-api-step-3/target/classes started by catarinasousa in /Users/catarinasousa/Desktop/rent-a-car-api-step-3)
+ [INFO ] 2021-07-28 16:28:04.725 [restartedMain] RentACarApiApplication - No active profile set, falling back to default profiles: default
+ [INFO ] 2021-07-28 16:28:04.801 [restartedMain] DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ [INFO ] 2021-07-28 16:28:04.802 [restartedMain] DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ [INFO ] 2021-07-28 16:28:06.026 [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ [INFO ] 2021-07-28 16:28:06.113 [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 75 ms. Found 3 JPA repository interfaces.
+ [INFO ] 2021-07-28 16:28:06.910 [restartedMain] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+ [INFO ] 2021-07-28 16:28:06.932 [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+ [INFO ] 2021-07-28 16:28:06.933 [restartedMain] StandardService - Starting service [Tomcat]
+ [INFO ] 2021-07-28 16:28:06.933 [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+ [INFO ] 2021-07-28 16:28:07.042 [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+ [INFO ] 2021-07-28 16:28:07.042 [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2235 ms
+ [INFO ] 2021-07-28 16:28:07.248 [restartedMain] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+ [INFO ] 2021-07-28 16:28:07.315 [restartedMain] Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+ [INFO ] 2021-07-28 16:28:07.511 [restartedMain] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ [INFO ] 2021-07-28 16:28:07.686 [restartedMain] HikariDataSource - HikariPool-1 - Starting...
+ [INFO ] 2021-07-28 16:28:08.170 [restartedMain] HikariDataSource - HikariPool-1 - Start completed.
+ [INFO ] 2021-07-28 16:28:08.233 [restartedMain] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+ [INFO ] 2021-07-28 16:28:09.901 [restartedMain] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+ [INFO ] 2021-07-28 16:28:09.929 [restartedMain] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ [WARN ] 2021-07-28 16:28:10.021 [restartedMain] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ [INFO ] 2021-07-28 16:28:11.184 [restartedMain] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@17c8e5d0, org.springframework.security.web.context.SecurityContextPersistenceFilter@3871676c, org.springframework.security.web.header.HeaderWriterFilter@21d30694, org.springframework.security.web.authentication.logout.LogoutFilter@4bfd3661, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1be17c31, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6fe40ff8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@60a42818, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3249f679, org.springframework.security.web.session.SessionManagementFilter@63659de3, org.springframework.security.web.access.ExceptionTranslationFilter@63f94c1f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1050403b]
+ [INFO ] 2021-07-28 16:28:11.761 [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+ [INFO ] 2021-07-28 16:28:11.783 [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+ [INFO ] 2021-07-28 16:28:11.801 [restartedMain] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+ [INFO ] 2021-07-28 16:28:11.813 [restartedMain] RentACarApiApplication - Started RentACarApiApplication in 7.727 seconds (JVM running for 9.092)
+ [INFO ] 2021-07-28 16:28:13.997 [http-nio-8080-exec-1] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ [INFO ] 2021-07-28 16:28:13.997 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+ [INFO ] 2021-07-28 16:28:13.999 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 1 ms
+ [INFO ] 2021-07-28 16:28:14.373 [http-nio-8080-exec-1] UserController - Request to create new user - CreateOrUpdateUserDto(firstName=Tony, lastName=Batatas, licenseId=00AF55, email=tonybatatas@batatas.com, password=1)
+ [INFO ] 2021-07-28 16:28:14.382 [http-nio-8080-exec-1] UserServiceImp - Setting password.
+ [INFO ] 2021-07-28 16:28:15.097 [http-nio-8080-exec-1] UserController - User created successfully. Retrieving created user with id 1
+ [WARN ] 2021-07-28 16:30:39.190 [http-nio-8080-exec-6] ExceptionHandlerExceptionResolver - Resolved [academy.mindswap.rentacarapi.exception.AuthenticationFailureException: Bad credentials! :( ]
+ [INFO ] 2021-07-28 16:35:37.394 [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+ [INFO ] 2021-07-28 16:35:37.399 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+ [INFO ] 2021-07-28 16:35:37.420 [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+ [INFO ] 2021-07-28 16:35:59.839 [background-preinit] Version - HV000001: Hibernate Validator 6.2.0.Final
+ [INFO ] 2021-07-28 16:36:00.002 [restartedMain] RentACarApiApplication - Starting RentACarApiApplication using Java 16.0.1 on MBP-de-Catarina.lan with PID 44262 (/Users/catarinasousa/Desktop/rent-a-car-api-step-3/target/classes started by catarinasousa in /Users/catarinasousa/Desktop/rent-a-car-api-step-3)
+ [INFO ] 2021-07-28 16:36:00.015 [restartedMain] RentACarApiApplication - No active profile set, falling back to default profiles: default
+ [INFO ] 2021-07-28 16:36:00.092 [restartedMain] DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ [INFO ] 2021-07-28 16:36:00.093 [restartedMain] DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ [INFO ] 2021-07-28 16:36:01.220 [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ [INFO ] 2021-07-28 16:36:01.296 [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 3 JPA repository interfaces.
+ [INFO ] 2021-07-28 16:36:02.193 [restartedMain] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+ [INFO ] 2021-07-28 16:36:02.208 [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+ [INFO ] 2021-07-28 16:36:02.209 [restartedMain] StandardService - Starting service [Tomcat]
+ [INFO ] 2021-07-28 16:36:02.209 [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+ [INFO ] 2021-07-28 16:36:02.323 [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+ [INFO ] 2021-07-28 16:36:02.323 [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2230 ms
+ [INFO ] 2021-07-28 16:36:02.537 [restartedMain] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+ [INFO ] 2021-07-28 16:36:02.605 [restartedMain] Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+ [INFO ] 2021-07-28 16:36:02.840 [restartedMain] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ [INFO ] 2021-07-28 16:36:03.040 [restartedMain] HikariDataSource - HikariPool-1 - Starting...
+ [INFO ] 2021-07-28 16:36:03.491 [restartedMain] HikariDataSource - HikariPool-1 - Start completed.
+ [INFO ] 2021-07-28 16:36:03.547 [restartedMain] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+ [INFO ] 2021-07-28 16:36:05.037 [restartedMain] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+ [INFO ] 2021-07-28 16:36:05.048 [restartedMain] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ [WARN ] 2021-07-28 16:36:05.127 [restartedMain] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ [INFO ] 2021-07-28 16:36:06.387 [restartedMain] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d446824, org.springframework.security.web.context.SecurityContextPersistenceFilter@216272d5, org.springframework.security.web.header.HeaderWriterFilter@4bf147d6, org.springframework.security.web.authentication.logout.LogoutFilter@1ea628da, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@582837c5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@46d20e08, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2cd1747e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6fe6e61, org.springframework.security.web.session.SessionManagementFilter@3344fd5, org.springframework.security.web.access.ExceptionTranslationFilter@1f7ea423, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@485650fe]
+ [INFO ] 2021-07-28 16:36:06.923 [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+ [INFO ] 2021-07-28 16:36:06.941 [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+ [INFO ] 2021-07-28 16:36:06.964 [restartedMain] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+ [INFO ] 2021-07-28 16:36:06.975 [restartedMain] RentACarApiApplication - Started RentACarApiApplication in 7.567 seconds (JVM running for 9.732)
+ [INFO ] 2021-07-28 16:36:21.274 [http-nio-8080-exec-2] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ [INFO ] 2021-07-28 16:36:21.274 [http-nio-8080-exec-2] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+ [INFO ] 2021-07-28 16:36:21.276 [http-nio-8080-exec-2] DispatcherServlet - Completed initialization in 2 ms
+ [INFO ] 2021-07-28 16:36:21.618 [http-nio-8080-exec-2] UserController - Request to create new user - CreateOrUpdateUserDto(firstName=Tony, lastName=Batatas, licenseId=00AF55, email=tonybatatas@batatas.com, password=1)
+ [INFO ] 2021-07-28 16:36:21.627 [http-nio-8080-exec-2] UserServiceImp - Setting password.
+ [INFO ] 2021-07-28 16:36:22.429 [http-nio-8080-exec-2] UserController - User created successfully. Retrieving created user with id 1
+ [WARN ] 2021-07-28 16:36:37.518 [http-nio-8080-exec-4] ExceptionHandlerExceptionResolver - Resolved [academy.mindswap.rentacarapi.exception.AuthenticationFailureException: Bad credentials! :( ]
+ [ERROR] 2021-07-28 16:36:47.594 [http-nio-8080-exec-5] AuthenticatorController - Invalid
+ 
